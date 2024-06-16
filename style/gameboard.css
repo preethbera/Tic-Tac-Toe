@@ -1,0 +1,217 @@
+:root{
+    --borderrad: 1.2em;
+}
+/* -------------------------showturn---------------------------------------------------- */
+
+.showturncont{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2ps solid rgb(255, 255, 255);
+    background-color: #3e89d4;
+    border-top-left-radius: var(--borderrad);
+    border-top-right-radius: var(--borderrad);
+}
+.showturn{
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+/* -----------------gameboard------------------------------------------------------------------------ */
+.gameboardcont{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.gameboard{
+    position: relative;
+    background-color: #4b4b4b;
+    display: inline-grid;
+    row-gap: 0.5rem;
+    column-gap: 0.5rem;
+    border-radius: var(--borderrad);
+}
+.x3{
+    display: none;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+.x4{
+    display: none;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+}
+.x5{
+    display: none;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+}
+.afterselected{
+    display: inline-grid;
+}
+
+.oxbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    width: 9rem;
+    height: 9rem;
+    cursor: pointer;
+}
+.x4 .oxbox{
+    width: 6.5rem;
+    height: 6.5rem;
+}
+.x4 .svgO, .x4 .svgX{
+    width: 3.5rem;
+}
+.x5 .oxbox{
+    width: 6rem;
+    height: 6rem;
+}
+.x5 .svgO, .x5 .svgX{
+    width: 3.3rem;
+}
+.blbox{
+    border-bottom-left-radius: var(--borderrad);
+}
+.brbox{
+    border-bottom-right-radius: var(--borderrad);
+}
+/* ---------------------------svg and animaiton----------------------------------------------------------- */
+.svgX{
+    display: none;
+    fill:none;
+    stroke:#4b9770;
+    stroke-width: 6.5;
+    stroke-linecap:round;
+    stroke-linejoin:bevel;
+    stroke-opacity:1;
+    width: 5rem;
+    stroke-dasharray: 251.2;
+}
+.svgO{
+    display: none;
+    fill:none;
+    fill-opacity:1;
+    stroke:#1e72c8;
+    stroke-width:6.34343;
+    stroke-linecap:round;
+    stroke-linejoin:bevel;
+    stroke-opacity:1;
+    width: 5rem;
+    stroke-dasharray: 251.2; /* This is the circumference of the circle (2 * π * r) */
+}
+@keyframes draw {
+    from{
+        stroke-dashoffset: 251.2;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+.svgafterclick{
+    display: block;
+    animation: draw 2s ease;
+}
+
+/* ------------------------------------CSS of buttons-------------------------------------------------------- */
+.boardbuttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+}
+.reset{ 
+    border: none;
+    background-color: #3e89d4;
+    color: white;
+    font-weight: 500;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 1em 2em 1em 2em;
+    border-radius: 0.7em;
+}
+.select{
+    border: none;
+    background-color: #3e89d4;
+    color: white;
+    font-size: 1rem;
+    padding: 1em 2em 1em 2em;
+    border-radius: 0.7rem;
+}
+.hover:hover{
+    background-color: #377fc7;
+}
+
+#restart{
+    display: none;
+}
+.active:active{
+    background-color: #2f6faf;
+}
+
+.combinedboard{
+    box-shadow: #2f2f2f 0.3em 0.3em 0.8em 0.002em;
+    border-radius: var(--borderrad);
+    margin-bottom: 1rem;
+    display: inline-grid;
+}
+
+/* --------------------css for responsive design-------------------------------------------------------- */
+
+@media only screen and (max-width: 660px){
+    .titlecont h1{
+        font-size: 2rem;
+    }
+    .subtitle span{
+        font-size: 1.3rem;
+    }
+    .titlecont img{
+        width: 3.7rem;
+    }
+    .x3 .oxbox{
+        width: 6.5rem;
+        height: 6.5rem;
+    }
+    .x3 .svgO, .x3 .svgX{
+        width: 3.5rem;
+    }
+    .gameboard{
+        column-gap: 0.3rem;
+        row-gap: 0.3rem;
+    }
+}
+@media only screen and (max-width: 560px){
+    .x3 .oxbox{
+        width: 6rem;
+        height: 6rem;
+    }
+    .x3 .svgO, .x3 .svgX{
+        width: 3.15rem;
+    }
+    .x4 .oxbox{
+        width: 4.5rem;
+        height: 4.5rem;
+    }
+    .x4 .svgO, .x4 .svgX{
+        width: 2.7rem;
+    }
+    .x5 .oxbox{
+        width: 3.8rem;
+        height: 3.8rem;
+    }
+    .x5 .svgO, .x5 .svgX{
+        width: 2.4rem;
+    }
+    .gameboard{
+        column-gap: 0.3rem;
+        row-gap: 0.3rem;
+    }
+}

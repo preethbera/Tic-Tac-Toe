@@ -1,0 +1,69 @@
+:root{
+    --borderrad: 1.2em;
+}
+.scoreboardcont {
+    background-color: #b8ddff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: var(--borderrad);
+    padding: 0.5em;
+    box-shadow: #2f2f2f 0.3em 0.3em 0.8em 0.002em;
+}
+
+.scorecont {
+    border-radius: 0.7em;
+    background-color: rgb(39, 132, 208);
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 0.2em;
+    flex-wrap: wrap;
+}
+
+.scoreboardtitle {
+    color: rgb(255, 255, 255);
+    font-size: 2.2rem;
+    font-weight: 900;
+    display: inline-block;
+    padding: 0.2em;
+}
+
+.p1score, .p2score {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.7em;
+    margin: 0.3em;
+    border-radius: var(--borderrad);
+}
+
+.p1score span:nth-child(1), .p2score span:nth-child(1) {
+    font-weight: 700;
+    font-size: 2rem;
+    color: white;
+    white-space: nowrap;
+}
+
+.p1score span:nth-child(2), .p2score span:nth-child(2) {
+    font-weight: 500;
+    font-size: 2rem;
+    color: white;
+    white-space: nowrap;
+}
+
+.gamecont{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+.resetbtncont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+}

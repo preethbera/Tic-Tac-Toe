@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+}
+body{
+    background-color: #d3eaff;
+    overflow-x: hidden;
+}
+/* --------------------------------title and header-------------------------------------------------------------------------------- */
+.headcont{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    background-color: #b8ddff;
+    box-shadow: #b8ddff 0.5em 0em 2em 1em;
+}
+.titlecont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.titlecont img{
+    width: 4.5rem;
+}
+.titlecont h1{
+    display: inline;
+    font-family: 'Fredoka One', cursive;
+    font-size: 2.8rem;
+    text-align: center;
+    color: rgb(42, 42, 42);
+}
+.subtitle span{
+    font-style: italic;
+    font-weight: 600;
+    font-size: 1.6rem;
+    text-align: center;
+    color: rgb(42, 42, 42);
+}
+/* ---------------------------------------maincont----------------------------------------------------- */
+.maincont{
+    display: flex;
+    justify-content: center;
+    gap: 2.2rem;
+    flex-wrap: wrap;
+    padding: 1rem;
+}
+/* ---------------------- reset modal CSS---------------------------------------------------------------- */
+.modalcontainer{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.395);
+    width: 100%;
+    height: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;  
+}
+.resetmodal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background-color: #c8e4ff;
+    border-radius: 1.5rem;
+    overflow: auto;
+    z-index: 1;
+}
+.modalcontent{
+    display: inline-block;
+    color: #212121;
+    font-weight: 500;
+    font-size: 1.3rem;
+    padding-bottom: 0.8rem;
+}
+#modalcancel, #modalreset{
+    margin: 0.5rem;
+}
+/* --------------------------input modal css----------------------------------------------- */
+.namemodalcontainer{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.395);
+    width: 100%;
+    height: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+.inputmodal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background-color: #c8e4ff;
+    border-radius: 1.5rem;
+    overflow: auto;
+    z-index: 1;
+}
+.inputcont{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.input{
+    appearance: none;
+    border: none;
+    padding: 1rem;
+    margin: 0.5rem;
+    font-size: 1rem;
+    color: #212121;
+    border-radius: 0.8rem;
+}

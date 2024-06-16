@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/x-icon" href="images/logotic2.svg">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/gameboard.css">
+    <link rel="stylesheet" href="style/scoreboard.css">
+    <title>Tic-Tac-Toe</title>
+    <script defer src="javascript/logic.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="headcont">
+            <div class="titlecont">
+                <img src="images/logotic2.svg" alt="logo">
+                <h1>Tic-Tac-Toe Showdown</h1>
+            </div>
+            <div class="subtitle">
+                <span>The Ultimate Battle of Xs and Os</span>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="maincont">
+            <div class="gameboardcont">
+                <div class="combinedboard">
+                    <div class="showturncont">
+                        <span class="showturn"></span>
+                    </div>
+                    <div class="gameboard x3 afterselected">
+                        <div class="oxbox tlbox" data-value="">
+                            <svg viewBox="0 0 31.75 31.75" version="1.1" class="svgX" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs1" />
+                                <path d="M 4.3707185,4.5516024 27.379282,27.1984" id="path1" />
+                                <path d="M 27.1984,4.3707191 4.5516007,27.379283" id="path2" />
+                            </svg>
+                            <svg viewBox="0 0 31.749988 31.75" version="1.1" class="svgO"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs1" />
+                                <circle id="path1" cx="15.874997" cy="15.874997" r="12.686862" />
+                            </svg>
+                        </div>
+                        <div class="oxbox" data-value="">
+                            <svg viewBox="0 0 31.75 31.75" version="1.1" class="svgX" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs1" />
+                                <path d="M 4.3707185,4.5516024 27.379282,27.1984" id="path1" />
+                                <path d="M 27.1984,4.3707191 4.5516007,27.379283" id="path2" />
+                            </svg>
+                            <svg viewBox="0 0 31.749988 31.75" version="1.1" class="svgO"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs1" />
+                                <circle id="path1" cx="15.874997" cy="15.874997" r="12.686862" />
+                            </svg>
+                        </div>
+                        <div class="oxbox trbox" data-value="">
+                            <svg viewBox="0 0 31.75 31.75" version="1.1" class="svgX" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs1" />
+                                <path d="M 4.3707185,4.5516024 27.379282,27.1984" id="path1" />
+                                <path d="M 27.1984,4.3707191 4.5516007,27.379283" id="path2" />
+                            </svg>
+                            <svg viewBox="0 0 31.749988 31.75" version="1.1" class="svgO"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs1" />
+                                <circle id="path1" cx="15.874997" cy="15.874997" r="12.686862" />
+                            </svg>
+                        </div>
+                        <div class="oxbox" data-value="">
+                            <svg viewBox="0 0 31.75 31.75" version="1.1" class="svgX" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs1" />
+                                <path d="M 4.3707185,4.5516024 27.379282,27.1984" id="path1" />
+                                <path d="M 27.1984,4.3707191 4.5516007,27.379283" id="path2" />
+                            </svg>
+                            <svg viewBox="0 0 31.749988 31.75" version="1.1" class="svgO"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs1" />
+                                <circle id="path1" cx="15.874997" cy="15.874997" r="12.686862" />
+                            </svg>
+                        </div>
+                        <div class="oxbox" data-value="">
+                            <svg viewBox="0 0 31.75 31.75" version="1.1" class="svgX" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs1" />
+                                <path d="M 4.3707185,4.5516024 27.379282,27.1984" id="path1" />
+                                <path d="M 27.1984,4.3707191 4.5516007,27.379283" id="path2" />
+                            </svg>
+                            <svg viewBox="0 0 31.749988 31.75" version="1.1" class="svgO"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs1" />
+                                <circle id="path1" cx="15.874997" cy="15.874997" r="12.686862" />
+                            </svg>
+                        </div>
+                        <div class="oxbox" data-value="">
+                            <svg viewBox="0 0 31.75 31.75" version="1.1" class="svgX" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs1" />
+                                <path d="M 4.3707185,4.5516024 27.379282,27.1984" id="path1" />
+                                <path d="M 27.1984,4.3707191 4.5516007,27.379283" id="path2" />
+                            </svg>
+                            <svg viewBox="0 0 31.749988 31.75" version="1.1" class="svgO"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs1" />
+                                <circle id="path1" cx="15.874997" cy="15.874997" r="12.686862" />
+                            </svg>
+                        </div>
+                        <div class="oxbox blbox" data-value="">
+                            <svg viewBox="0 0 31.75 31.75" version="1.1" class="svgX" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs1" />
+                                <path d="M 4.3707185,4.5516024 27.379282,27.1984" id="path1" />
+                                <path d="M 27.1984,4.3707191 4.5516007,27.379283" id="path2" />
+                            </svg>
+                            <svg viewBox="0 0 31.749988 31.75" version="1.1" class="svgO"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs1" />
+                                <circle id="path1" cx="15.874997" cy="15.874997" r="12.686862" />
+                            </svg>
+                        </div>
+                        <div class="oxbox" data-value="">
+                            <svg viewBox="0 0 31.75 31.75" version="1.1" class="svgX" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs1" />
+                                <path d="M 4.3707185,4.5516024 27.379282,27.1984" id="path1" />
+                                <path d="M 27.1984,4.3707191 4.5516007,27.379283" id="path2" />
+                            </svg>
+                            <svg viewBox="0 0 31.749988 31.75" version="1.1" class="svgO"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs1" />
+                                <circle id="path1" cx="15.874997" cy="15.874997" r="12.686862" />
+                            </svg>
+                        </div>
+                        <div class="oxbox brbox" data-value="">
+                            <svg viewBox="0 0 31.75 31.75" version="1.1" class="svgX" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs1" />
+                                <path d="M 4.3707185,4.5516024 27.379282,27.1984" id="path1" />
+                                <path d="M 27.1984,4.3707191 4.5516007,27.379283" id="path2" />
+                            </svg>
+                            <svg viewBox="0 0 31.749988 31.75" version="1.1" class="svgO"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs1" />
+                                <circle id="path1" cx="15.874997" cy="15.874997" r="12.686862" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="gameboard x4">
+                        <div class="oxbox tlbox" data-value="">
+                            <svg viewBox="0 0 31.75 31.75" version="1.1" class="svgX" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs1" />
+                                <path d="M 4.3707185,4.5516024 27.379282,27.1984" id="path1" />
+                                <path d="M 27.1984,4.3707191 4.5516007,27.379283" id="path2" />
+                            </svg>
+                            <svg viewBox="0 0 31.749988 31.75" version="1.1" class="svgO"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs1" />
+                                <circle id="path1" cx="15.874997" cy="15.874997" r="12.686862" />
+                            </svg>
+                        </div>
+                        <div class="oxbox" data-value="">
+                            <svg viewBox="0 0 31.75 31.75" version="1.1" class="svgX" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs1" />
+                                <path d="M 4.3707185,4.5516024 27.379282,27.1984" id="path1" />
+                                <path d="M 27.1984,4.3707191 4.5516007,27.379283" id="path2" />
+                            </svg>
+                            <svg viewBox="0 0 31.749988 31.75" version="1.1" class="svgO"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs1" />
+                                <circle id="path1" cx="15.874997" cy="15.874997" r="12.686862" />
+                            </svg>
+                        </div>
+                        <div class="oxbox" data-value="">
+                            <svg viewBox="0 0 31.75 31.75" version="1.1" class="svgX" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs1" />
+                                <path d="M 4.3707185,4.5516024 27.379282,27.1984" id="path1" />
+                                <path d="M 27.1984,4.3707191 4.5516007,27.379283" id="path2" />
+                            </svg>
+                            <svg viewBox="0 0 31.749988 31.75" version="1.1" class="svgO"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs1" />
+                                <circle id="path1" cx="15.874997" cy="15.874997" r="12.686862" />
+                            </svg>
+                        </div>
+                        <div class="oxbox trbox" data-value="">
+                            <svg viewBox="0 0 31.75 31.75" version="1.1" class="svgX" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs1" />
+                                <path d="M 4.3707185,4.5516024 27.379282,27.1984" id="path1" />
+                                <path d="M 27.1984,4.3707191 4.5516007,27.379283" id="path2" />
+                            </svg>
+                            <svg viewBox="0 0 31.749988 31.75" version="1.1" class="svgO"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs1" />
+                                <circle id="path1" cx="15.874997" cy="15.874997" r="12.686862" />
+                            </svg>
+                        </div>
+                        <div class="oxbox" data-value="">
+                            <svg viewBox="0 0 31.75 31.75" version="1.1" class="svgX" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs1" />
+                                <path d="M 4.3707185,4.5516024 27.379282,27.1984" id="path1" />
+                                <path d="M 27.1984,4.3707191 4.5516007,27.379283" id="path2" />
+                            </svg>
+                            <svg viewBox="0 0 31.749988 31.75" version="1.1" class="svgO"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs1" />
+                                <circle id="path1" cx="15.874997" cy="15.874997" r="12.686862" />
+                            </svg>
+                        </div>
+                        <div class="oxbox" data-value="">
+                            <svg viewBox="0 0 31.75 31.75" version="1.1" class="svgX" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs1" />
+                                <path d="M 4.3707185,4.5516024 27.379282,27.1984" id="path1" />
+                                <path d="M 27.1984,4.3707191 4.5516007,27.379283" id="path2" />
+                            </svg>
+                            <svg viewBox="0 0 31.749988 31.75" version="1.1" class="svgO"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs1" />
+                                <circle id="path1" cx="15.874997" cy="15.874997" r="12.686862" />
+                            </svg>
+                        </div>
+                        <div class="oxbox" data-value="">
+                            <svg viewBox="0 0 31.75 31.75" version="1.1" class="svgX" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs1" />
+                                <path d="M 4.3707185,4.5516024 27.379282,27.1984" id="path1" />
+                                <path d="M 27.1984,4.3707191 4.5516007,27.379283" id="path2" />
+                            </svg>
+                            <svg viewBox="0 0 31.749988 31.75" version="1.1" class="svgO"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs1" />
+                                <circle id="path1" cx="15.874997" cy="15.874997" r="12.686862" />
+                            </svg>
+                        </div>
+                        <div class="oxbox" data-value="">
+                            <svg viewBox="0 0 31.75 31.75" version="1.1" class="svgX" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs1" />
+                                <path d="M 4.3707185,4.5516024 27.379282,27.1984" id="path1" />
+                                <path d="M 27.1984,4.3707191 4.5516007,27.379283" id="path2" />
+                            </svg>
+                            <svg viewBox="0 0 31.749988 31.75" version="1.1" class="svgO"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs1" />
+                                <circle id="path1" cx="15.874997" cy="15.874997" r="12.686862" />
+                            </svg>
+                        </div>
+                        <div class="oxbox" data-value="">
+                            <svg viewBox="0 0 31.75 31.75" version="1.1" class="svgX" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs1" />
+                                <path d="M 4.3707185,4.5516024 27.379282,27.1984" id="path1" />
+                                <path d="M 27.1984,4.3707191 4.5516007,27.379283" id="path2" />
+                            </svg>
+                            <svg viewBox="0 0 31.749988 31.75" version="1.1" class="svgO"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs1" />
+                                <circle id="path1" cx="15.874997" cy="15.874997" r="12.686862" />
+                            </svg>
+                        </div>
+                        <div class="oxbox" data-value="">
+                            <svg viewBox="0 0 31.75 31.75" version="1.1" class="svgX" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs1" />
+                                <path d="M 4.3707185,4.5516024 27.379282,27.1984" id="path1" />
+                                <path d="M 27.1984,4.3707191 4.5516007,27.379283" id="path2" />
+                            </svg>
+                            <svg viewBox="0 0 31.749988 31.75" version="1.1" class="svgO"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs1" />
+                                <circle id="path1" cx="15.874997" cy="15.874997" r="12.686862" />
+                            </svg>
+                        </div>
+                        <div class="oxbox" data-value="">
+                            <svg viewBox="0 0 31.75 31.75" version="1.1" class="svgX" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs1" />
+                                <path d="M 4.3707185,4.5516024 27.379282,27.1984" id="path1" />
+                                <path d="M 27.1984,4.3707191 4.5516007,27.379283" id="path2" />
+                            </svg>
+                            <svg viewBox="0 0 31.749988 31.75" version="1.1" class="svgO"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs1" />
+                                <circle id="path1" cx="15.874997" cy="15.874997" r="12.686862" />
+                            </svg>
+                        </div>
+                        <div class="oxbox" data-value="">
+                            <svg viewBox="0 0 31.75 31.75" version="1.1" class="svgX" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs1" />
+                                <path d="M 4.3707185,4.5516024 27.379282,27.1984" id="path1" />
+                                <path d="M 27.1984,4.3707191 4.5516007,27.379283" id="path2" />
+                            </svg>
+                            <svg viewBox="0 0 31.749988 31.75" version="1.1" class="svgO"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs1" />
+                                <circle id="path1" cx="15.874997" cy="15.874997" r="12.686862" />
+                            </svg>
+                        </div>
+                        <div class="oxbox blbox" data-value="">
+                            <svg viewBox="0 0 31.75 31.75" version="1.1" class="svgX" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs1" />
+                                <path d="M 4.3707185,4.5516024 27.379282,27.1984" id="path1" />
+                                <path d="M 27.1984,4.3707191 4.5516007,27.379283" id="path2" />
+                            </svg>
+                            <svg viewBox="0 0 31.749988 31.75" version="1.1" class="svgO"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs1" />
+                                <circle id="path1" cx="15.874997" cy="15.874997" r="12.686862" />
+                            </svg>
+                        </div>
+                        <div class="oxbox" data-value="">
+                            <svg viewBox="0 0 31.75 31.75" version="1.1" class="svgX" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs1" />
+                                <path d="M 4.3707185,4.5516024 27.379282,27.1984" id="path1" />
+                                <path d="M 27.1984,4.3707191 4.5516007,27.379283" id="path2" />
+                            </svg>
+                            <svg viewBox="0 0 31.749988 31.75" version="1.1" class="svgO"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs1" />
+                                <circle id="path1" cx="15.874997" cy="15.874997" r="12.686862" />
+                            </svg>
+                        </div>
+                        <div class="oxbox" data-value="">
+                            <svg viewBox="0 0 31.75 31.75" version="1.1" class="svgX" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs1" />
+                                <path d="M 4.3707185,4.5516024 27.379282,27.1984" id="path1" />
+                                <path d="M 27.1984,4.3707191 4.5516007,27.379283" id="path2" />
+                            </svg>
+                            <svg viewBox="0 0 31.749988 31.75" version="1.1" class="svgO"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs1" />
+                                <circle id="path1" cx="15.874997" cy="15.874997" r="12.686862" />
+                            </svg>
+                        </div>
+                        <div class="oxbox brbox" data-value="">
+                            <svg viewBox="0 0 31.75 31.75" version="1.1" class="svgX" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs1" />
+                                <path d="M 4.3707185,4.5516024 27.379282,27.1984" id="path1" />
+                                <path d="M 27.1984,4.3707191 4.5516007,27.379283" id="path2" />
+                            </svg>
+                            <svg viewBox="0 0 31.749988 31.75" version="1.1" class="svgO"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs1" />
+                                <circle id="path1" cx="15.874997" cy="15.874997" r="12.686862" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="gameboard x5">
+                        <div class="oxbox tlbox" data-value="">
+                            <svg viewBox="0 0 31.75 31.75" version="1.1" class="svgX" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs1" />
+                                <path d="M 4.3707185,4.5516024 27.379282,27.1984" id="path1" />
+                                <path d="M 27.1984,4.3707191 4.5516007,27.379283" id="path2" />
+                            </svg>
+                            <svg viewBox="0 0 31.749988 31.75" version="1.1" class="svgO"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs1" />
+                                <circle id="path1" cx="15.874997" cy="15.874997" r="12.686862" />
+                            </svg>
+                        </div>
+                        <div class="oxbox" data-value="">
+                            <svg viewBox="0 0 31.75 31.75" version="1.1" class="svgX" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs1" />
+                                <path d="M 4.3707185,4.5516024 27.379282,27.1984" id="path1" />
+                                <path d="M 27.1984,4.3707191 4.5516007,27.379283" id="path2" />
+                            </svg>
+                            <svg viewBox="0 0 31.749988 31.75" version="1.1" class="svgO"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs1" />
+                                <circle id="path1" cx="15.874997" cy="15.874997" r="12.686862" />
+                            </svg>
+                        </div>
+                        <div class="oxbox" data-value="">
+                            <svg viewBox="0 0 31.75 31.75" version="1.1" class="svgX" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs1" />
+                                <path d="M 4.3707185,4.5516024 27.379282,27.1984" id="path1" />
+                                <path d="M 27.1984,4.3707191 4.5516007,27.379283" id="path2" />
+                            </svg>
+                            <svg viewBox="0 0 31.749988 31.75" version="1.1" class="svgO"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs1" />
+                                <circle id="path1" cx="15.874997" cy="15.874997" r="12.686862" />
+                            </svg>
+                        </div>
+                        <div class="oxbox" data-value="">
+                            <svg viewBox="0 0 31.75 31.75" version="1.1" class="svgX" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs1" />
+                                <path d="M 4.3707185,4.5516024 27.379282,27.1984" id="path1" />
+                                <path d="M 27.1984,4.3707191 4.5516007,27.379283" id="path2" />
+                            </svg>
+                            <svg viewBox="0 0 31.749988 31.75" version="1.1" class="svgO"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs1" />
+                                <circle id="path1" cx="15.874997" cy="15.874997" r="12.686862" />
+                            </svg>
+                        </div>
+                        <div class="oxbox trbox" data-value="">
+                            <svg viewBox="0 0 31.75 31.75" version="1.1" class="svgX" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs1" />
+                                <path d="M 4.3707185,4.5516024 27.379282,27.1984" id="path1" />
+                                <path d="M 27.1984,4.3707191 4.5516007,27.379283" id="path2" />
+                            </svg>
+                            <svg viewBox="0 0 31.749988 31.75" version="1.1" class="svgO"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs1" />
+                                <circle id="path1" cx="15.874997" cy="15.874997" r="12.686862" />
+                            </svg>
+                        </div>
+                        <div class="oxbox" data-value="">
+                            <svg viewBox="0 0 31.75 31.75" version="1.1" class="svgX" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs1" />
+                                <path d="M 4.3707185,4.5516024 27.379282,27.1984" id="path1" />
+                                <path d="M 27.1984,4.3707191 4.5516007,27.379283" id="path2" />
+                            </svg>
+                            <svg viewBox="0 0 31.749988 31.75" version="1.1" class="svgO"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs1" />
+                                <circle id="path1" cx="15.874997" cy="15.874997" r="12.686862" />
+                            </svg>
+                        </div>
+                        <div class="oxbox" data-value="">
+                            <svg viewBox="0 0 31.75 31.75" version="1.1" class="svgX" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs1" />
+                                <path d="M 4.3707185,4.5516024 27.379282,27.1984" id="path1" />
+                                <path d="M 27.1984,4.3707191 4.5516007,27.379283" id="path2" />
+                            </svg>
+                            <svg viewBox="0 0 31.749988 31.75" version="1.1" class="svgO"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs1" />
+                                <circle id="path1" cx="15.874997" cy="15.874997" r="12.686862" />
+                            </svg>
+                        </div>
+                        <div class="oxbox" data-value="">
+                            <svg viewBox="0 0 31.75 31.75" version="1.1" class="svgX" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs1" />
+                                <path d="M 4.3707185,4.5516024 27.379282,27.1984" id="path1" />
+                                <path d="M 27.1984,4.3707191 4.5516007,27.379283" id="path2" />
+                            </svg>
+                            <svg viewBox="0 0 31.749988 31.75" version="1.1" class="svgO"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs1" />
+                                <circle id="path1" cx="15.874997" cy="15.874997" r="12.686862" />
+                            </svg>
+                        </div>
+                        <div class="oxbox" data-value="">
+                            <svg viewBox="0 0 31.75 31.75" version="1.1" class="svgX" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs1" />
+                                <path d="M 4.3707185,4.5516024 27.379282,27.1984" id="path1" />
+                                <path d="M 27.1984,4.3707191 4.5516007,27.379283" id="path2" />
+                            </svg>
+                            <svg viewBox="0 0 31.749988 31.75" version="1.1" class="svgO"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs1" />
+                                <circle id="path1" cx="15.874997" cy="15.874997" r="12.686862" />
+                            </svg>
+                        </div>
+                        <div class="oxbox" data-value="">
+                            <svg viewBox="0 0 31.75 31.75" version="1.1" class="svgX" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs1" />
+                                <path d="M 4.3707185,4.5516024 27.379282,27.1984" id="path1" />
+                                <path d="M 27.1984,4.3707191 4.5516007,27.379283" id="path2" />
+                            </svg>
+                            <svg viewBox="0 0 31.749988 31.75" version="1.1" class="svgO"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs1" />
+                                <circle id="path1" cx="15.874997" cy="15.874997" r="12.686862" />
+                            </svg>
+                        </div>
+                        <div class="oxbox" data-value="">
+                            <svg viewBox="0 0 31.75 31.75" version="1.1" class="svgX" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs1" />
+                                <path d="M 4.3707185,4.5516024 27.379282,27.1984" id="path1" />
+                                <path d="M 27.1984,4.3707191 4.5516007,27.379283" id="path2" />
+                            </svg>
+                            <svg viewBox="0 0 31.749988 31.75" version="1.1" class="svgO"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs1" />
+                                <circle id="path1" cx="15.874997" cy="15.874997" r="12.686862" />
+                            </svg>
+                        </div>
+                        <div class="oxbox" data-value="">
+                            <svg viewBox="0 0 31.75 31.75" version="1.1" class="svgX" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs1" />
+                                <path d="M 4.3707185,4.5516024 27.379282,27.1984" id="path1" />
+                                <path d="M 27.1984,4.3707191 4.5516007,27.379283" id="path2" />
+                            </svg>
+                            <svg viewBox="0 0 31.749988 31.75" version="1.1" class="svgO"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs1" />
+                                <circle id="path1" cx="15.874997" cy="15.874997" r="12.686862" />
+                            </svg>
+                        </div>
+                        <div class="oxbox" data-value="">
+                            <svg viewBox="0 0 31.75 31.75" version="1.1" class="svgX" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs1" />
+                                <path d="M 4.3707185,4.5516024 27.379282,27.1984" id="path1" />
+                                <path d="M 27.1984,4.3707191 4.5516007,27.379283" id="path2" />
+                            </svg>
+                            <svg viewBox="0 0 31.749988 31.75" version="1.1" class="svgO"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs1" />
+                                <circle id="path1" cx="15.874997" cy="15.874997" r="12.686862" />
+                            </svg>
+                        </div>
+                        <div class="oxbox" data-value="">
+                            <svg viewBox="0 0 31.75 31.75" version="1.1" class="svgX" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs1" />
+                                <path d="M 4.3707185,4.5516024 27.379282,27.1984" id="path1" />
+                                <path d="M 27.1984,4.3707191 4.5516007,27.379283" id="path2" />
+                            </svg>
+                            <svg viewBox="0 0 31.749988 31.75" version="1.1" class="svgO"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs1" />
+                                <circle id="path1" cx="15.874997" cy="15.874997" r="12.686862" />
+                            </svg>
+                        </div>
+                        <div class="oxbox" data-value="">
+                            <svg viewBox="0 0 31.75 31.75" version="1.1" class="svgX" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs1" />
+                                <path d="M 4.3707185,4.5516024 27.379282,27.1984" id="path1" />
+                                <path d="M 27.1984,4.3707191 4.5516007,27.379283" id="path2" />
+                            </svg>
+                            <svg viewBox="0 0 31.749988 31.75" version="1.1" class="svgO"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs1" />
+                                <circle id="path1" cx="15.874997" cy="15.874997" r="12.686862" />
+                            </svg>
+                        </div>
+                        <div class="oxbox" data-value="">
+                            <svg viewBox="0 0 31.75 31.75" version="1.1" class="svgX" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs1" />
+                                <path d="M 4.3707185,4.5516024 27.379282,27.1984" id="path1" />
+                                <path d="M 27.1984,4.3707191 4.5516007,27.379283" id="path2" />
+                            </svg>
+                            <svg viewBox="0 0 31.749988 31.75" version="1.1" class="svgO"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs1" />
+                                <circle id="path1" cx="15.874997" cy="15.874997" r="12.686862" />
+                            </svg>
+                        </div>
+                        <div class="oxbox" data-value="">
+                            <svg viewBox="0 0 31.75 31.75" version="1.1" class="svgX" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs1" />
+                                <path d="M 4.3707185,4.5516024 27.379282,27.1984" id="path1" />
+                                <path d="M 27.1984,4.3707191 4.5516007,27.379283" id="path2" />
+                            </svg>
+                            <svg viewBox="0 0 31.749988 31.75" version="1.1" class="svgO"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs1" />
+                                <circle id="path1" cx="15.874997" cy="15.874997" r="12.686862" />
+                            </svg>
+                        </div>
+                        <div class="oxbox" data-value="">
+                            <svg viewBox="0 0 31.75 31.75" version="1.1" class="svgX" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs1" />
+                                <path d="M 4.3707185,4.5516024 27.379282,27.1984" id="path1" />
+                                <path d="M 27.1984,4.3707191 4.5516007,27.379283" id="path2" />
+                            </svg>
+                            <svg viewBox="0 0 31.749988 31.75" version="1.1" class="svgO"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs1" />
+                                <circle id="path1" cx="15.874997" cy="15.874997" r="12.686862" />
+                            </svg>
+                        </div>
+                        <div class="oxbox" data-value="">
+                            <svg viewBox="0 0 31.75 31.75" version="1.1" class="svgX" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs1" />
+                                <path d="M 4.3707185,4.5516024 27.379282,27.1984" id="path1" />
+                                <path d="M 27.1984,4.3707191 4.5516007,27.379283" id="path2" />
+                            </svg>
+                            <svg viewBox="0 0 31.749988 31.75" version="1.1" class="svgO"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs1" />
+                                <circle id="path1" cx="15.874997" cy="15.874997" r="12.686862" />
+                            </svg>
+                        </div>
+                        <div class="oxbox" data-value="">
+                            <svg viewBox="0 0 31.75 31.75" version="1.1" class="svgX" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs1" />
+                                <path d="M 4.3707185,4.5516024 27.379282,27.1984" id="path1" />
+                                <path d="M 27.1984,4.3707191 4.5516007,27.379283" id="path2" />
+                            </svg>
+                            <svg viewBox="0 0 31.749988 31.75" version="1.1" class="svgO"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs1" />
+                                <circle id="path1" cx="15.874997" cy="15.874997" r="12.686862" />
+                            </svg>
+                        </div>
+                        <div class="oxbox blbox" data-value="">
+                            <svg viewBox="0 0 31.75 31.75" version="1.1" class="svgX" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs1" />
+                                <path d="M 4.3707185,4.5516024 27.379282,27.1984" id="path1" />
+                                <path d="M 27.1984,4.3707191 4.5516007,27.379283" id="path2" />
+                            </svg>
+                            <svg viewBox="0 0 31.749988 31.75" version="1.1" class="svgO"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs1" />
+                                <circle id="path1" cx="15.874997" cy="15.874997" r="12.686862" />
+                            </svg>
+                        </div>
+                        <div class="oxbox" data-value="">
+                            <svg viewBox="0 0 31.75 31.75" version="1.1" class="svgX" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs1" />
+                                <path d="M 4.3707185,4.5516024 27.379282,27.1984" id="path1" />
+                                <path d="M 27.1984,4.3707191 4.5516007,27.379283" id="path2" />
+                            </svg>
+                            <svg viewBox="0 0 31.749988 31.75" version="1.1" class="svgO"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs1" />
+                                <circle id="path1" cx="15.874997" cy="15.874997" r="12.686862" />
+                            </svg>
+                        </div>
+                        <div class="oxbox" data-value="">
+                            <svg viewBox="0 0 31.75 31.75" version="1.1" class="svgX" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs1" />
+                                <path d="M 4.3707185,4.5516024 27.379282,27.1984" id="path1" />
+                                <path d="M 27.1984,4.3707191 4.5516007,27.379283" id="path2" />
+                            </svg>
+                            <svg viewBox="0 0 31.749988 31.75" version="1.1" class="svgO"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs1" />
+                                <circle id="path1" cx="15.874997" cy="15.874997" r="12.686862" />
+                            </svg>
+                        </div>
+                        <div class="oxbox" data-value="">
+                            <svg viewBox="0 0 31.75 31.75" version="1.1" class="svgX" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs1" />
+                                <path d="M 4.3707185,4.5516024 27.379282,27.1984" id="path1" />
+                                <path d="M 27.1984,4.3707191 4.5516007,27.379283" id="path2" />
+                            </svg>
+                            <svg viewBox="0 0 31.749988 31.75" version="1.1" class="svgO"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs1" />
+                                <circle id="path1" cx="15.874997" cy="15.874997" r="12.686862" />
+                            </svg>
+                        </div>
+                        <div class="oxbox brbox" data-value="">
+                            <svg viewBox="0 0 31.75 31.75" version="1.1" class="svgX" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs1" />
+                                <path d="M 4.3707185,4.5516024 27.379282,27.1984" id="path1" />
+                                <path d="M 27.1984,4.3707191 4.5516007,27.379283" id="path2" />
+                            </svg>
+                            <svg viewBox="0 0 31.749988 31.75" version="1.1" class="svgO"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs1" />
+                                <circle id="path1" cx="15.874997" cy="15.874997" r="12.686862" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="boardbuttons">
+                    <button class="reset hover active" id="bodyreset" type="reset">Reset</button>
+                    <select name="nxn" id="nxnbtn" class="select hover">
+                        <option value="3" selected>3x3 board</option>
+                        <option value="4">4x4 board</option>
+                        <option value="5">5x5 board</option>
+                    </select>
+                    <select name="mode" class="select hover" id="modeselect">
+                        <option value="true" selected>Solo</option>
+                        <option value="false">1v1</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <div class="scoreboardcont">
+                    <span class="scoreboardtitle">SCORE Board</span>
+                    <div class="scorecont">
+                        <div class="p1score">
+                            <span id="player1span">Player O</span>
+                            <span id="oscore">0</span>
+                        </div>
+                        <div class="p2score">
+                            <span id="player2span">Computer(X)</span>
+                            <span id="xscore">0</span>
+                        </div>
+                    </div>
+                    <div class="resetbtncont">
+                        <button class="reset hover active" id="scorereset">Reset Scores</button>
+                        <button class="reset hover active" id="changename">Click to change Player Name</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="modalcontainer">
+            <div class="resetmodal">
+                <span class="modalcontent">Are you sure you want to reset the game? All current game progress will be
+                    lost.<br>Click "Reset" to
+                    start a new game, or "Cancel" to continue playing.</span>
+                <div>
+                    <button class="reset hover active" id="modalreset">Reset</button>
+                    <button class="reset hover active" id="modalcancel">Cancel</button>
+                </div>
+            </div>
+        </div>
+        <div class="namemodalcontainer">
+            <div class="inputmodal">
+                <div class="inputcont">
+                    <input id="player1" class="input" type="text" placeholder="player 1 name">
+                    <input id="player2" class="input" type="text" placeholder="player 2 name">
+                </div>
+                <div>
+                    <button class="reset hover active" id="okbtn">OK</button>
+                    <button class="reset hover active" id="inputmodalcancel">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
